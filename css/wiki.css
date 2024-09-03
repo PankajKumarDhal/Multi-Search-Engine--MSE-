@@ -1,0 +1,175 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+  .hbox {
+    padding-top: 5rem;
+  }
+
+  .hbox h3 {
+    font-size: 1rem;
+  }
+
+  button {
+    font-size: 1.2rem;
+}
+}
+
+.hbox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    font-family: Linux Libertine, Hoefler Text, Georgia, Times New Roman, Times, serif;
+    font-size: 24px;
+    margin-top: 3%;
+    position: relative;
+}
+
+.a1, .a2, .a3, .a4, .a5{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 4%;
+}
+
+.af11, .af12, .af21, .af22,.af31,.af32,.af41,.af42,.af51,.af52{
+    display: flex;
+    flex-direction: column;
+}
+
+.a1{
+    margin-top: 3%;
+    width: 400px;
+}
+
+.a2{
+    margin-top: 2%;
+    width: 800px;
+}
+
+.a3{
+    margin-top: 2%;
+    width:1000px;
+}
+
+.a4{
+    margin-top: 2%;
+    width: 800px;
+}
+
+.a5{
+    margin-top: 2%;
+    width: 600px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.sm{
+    margin-left: -25%;
+    color: rgb(147,89,93);
+}
+
+.midimg{
+    position: absolute;
+    margin-top: 14%;
+}
+
+
+.inpdiv{
+    width: 900px;
+}
+
+
+.inpbox{
+    margin-top: 8%;
+    width: 500px;
+    height: 40px;
+    margin-left: 20%;
+}
+
+.sbtn{
+    height: 43.1px;
+    width: 70px;
+    background-color: rgb(66, 66, 238);
+    cursor: pointer;
+    color: white;
+}
+
+h3::first-letter {
+    font-size: 150%;
+  }
+
+  .header::after {
+    content: attr(data-last-letter);
+    position: absolute;
+    font-size: 38px;
+  }
+  .hp{
+    margin-left: 1.5%;
+  }
+
+  .langdiv{
+    display: flex;
+    margin-top: 2%;
+    width: 29%;
+  }
+
+
+  .lngbtn{
+    height: 40px;
+    width: 300px;
+    color: blue;
+    cursor: pointer;
+  }
+
+  .lngsp1, .lngsp2{
+    margin-top: 1.5%;
+  }
+
+  .hr1{
+    margin-top: 2%;
+  }
+
+  .lngsp1{
+    margin-right: 3%;
+  }
+
+
+  .lngsp2{
+    margin-left: 3%;
+  }
+
+  #output{
+    background-color: #E5E5E5;
+    width: 600px;
+  }
+
+  #backButton {
+    background-color: #898989;
+    border: none; 
+    color: white; 
+    padding: 15px 32px; 
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block; 
+    font-size: 16px; 
+    margin-top: 20px; 
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 43%;
+}
+
+
+#backButton:hover {
+  background-color: #bcbcbc;
+}
+
+/* // */

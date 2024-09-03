@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="wikipedia.html">
+
+    <title>Gemini Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/gemini.css">
+    
+</head>
+<body class="gemini-background">
+    <header>
+        <div class="header-buttons">
+            <button class="header-button home" onclick="redirectToPage('index.html')">Home</button>
+            <button class="header-button google" onclick="redirectToPage('google.html')">Google</button>
+            <button class="header-button gemini" onclick="redirectToPage('gemini.html')">Gemini</button>
+            <button class="header-button wikipedia" onclick="redirectToPage('wikipedia.html')">Wikipedia</button>
+        </div>
+    </header>
+
+    <div class="main">
+        <div class="left">
+            <i class="fa-solid fa-bars"></i>
+            <div class="new_chat">
+                <div class="new_Chat1"><span>+</span> New Chat</div>
+                
+            </div>
+
+            <div class="last">
+                <div>
+                    <span class="icon"><i class="fa-regular fa-circle-question"></i></span>
+                    <span>Help</span>
+                </div>
+                <div>
+                    <span class="icon"><i class="fa-solid fa-arrow-rotate-left"></i></span>
+                    <span>Activity</span>
+                </div>
+                <div>
+                    <span class="icon"><i class="fa-solid fa-gear"></i></span>
+                    <span>Setting</span>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="header">
+                <select name="" id="">
+                    <option value="">Gemini</option>
+                    <option value="">Advance Gemini</option>
+                </select>
+                <div>
+                    <div class="advance">
+                        <i class="fa-solid fa-diamond"></i>
+                        <span>Try Gemini Advanced</span>
+                    </div>
+                    <!-- <i class="fa-solid fa-table-cells grid"></i> -->
+                    <img src="pk.png" alt="" class="profile">
+                </div>
+            </div>
+
+            <div class="selection1"> 
+                <div class="static">
+                    <h1>Hello, Pankaj</h1>
+                    <h1 class="secondH1">How Can I Help You today ?</h1>
+                    <div class="staticBoxes">
+                        <div class="one">Help me find the latest trends</div>
+                        <div class="one">Create a fun image of a flamingo in the sky</div>
+                        <div class="one">Come up with a product name for a new app</div>
+                        <div class="one">Brainstorm a tagline for my online store</div>    
+                    </div>
+                </div>
+                <div class="message"></div>
+                <div class="container">
+                    <div class="search-bar">
+                        <input type="text" id="search-query" placeholder="Enter your search query...">
+                        
+                        <button onclick="performSearch()">Search</button>
+                    </div>
+                    <div class="results">
+                        <ul id="results-list"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>    
+
+    </div>
+
+
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+        window.addEventListener('popstate', (event) => {
+            window.location.href = 'index.html';
+        });
+
+        // Add event listeners to columns
+        document.getElementById('javascript-column').addEventListener('click', () => {
+            document.getElementById('search-query').value = 'Explain JavaScript';
+            performSearch();
+        });
+
+        document.getElementById('java-column').addEventListener('click', () => {
+            document.getElementById('search-query').value = 'Explain Java';
+            performSearch();
+        });
+
+        document.getElementById('gemini-column').addEventListener('click', () => {
+            document.getElementById('search-query').value = 'Explain Google Gemini';
+            performSearch();
+        });
+    </script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

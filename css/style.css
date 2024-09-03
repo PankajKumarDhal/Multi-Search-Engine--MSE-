@@ -1,0 +1,372 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.index-background::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/multi-search-engine-logo.png');
+    background-size: 50%; /* Adjust the size as needed */
+    opacity: 0.2; /* Adjust the opacity to make it lighter */
+    z-index: -1; /* Ensure it stays behind all content */
+}
+.wikipedia-background {
+    background-image: url('https://images.unsplash.com/photo-1629196911514-cfd8d628ba26?q=80&w=3699&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3DD');
+}
+
+.container {
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin: 50px auto;
+}
+
+h1 {
+    font-size: 48px; /* Very large font size */
+    font-weight: bold;
+    margin-bottom: 50px;
+    position: relative; /* Required for animation */
+    animation: enlarge 1s ease-in-out infinite alternate; /* Animation definition */
+}
+
+.search-buttons {
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.google-search-button, .gemini-search-button, .wiki-search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.google-search-button {
+    background-color: #0a20e0;
+}
+
+.google-search-button:hover {
+    background-color: #0a20e0;
+    transform: scale(1.05);
+}
+
+.gemini-search-button {
+    background-color: #0a20e0;
+}
+
+.gemini-search-button:hover {
+    background-color: #0a20e0;
+    transform: scale(1.05);
+}
+
+.wiki-search-button {
+    background-color: #0a20e0;
+}
+
+.wiki-search-button:hover {
+    background-color: #0a20e0;
+    transform: scale(1.05);
+}
+
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 25px; /* Adjust the height as needed */
+}
+
+#search-query {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 90%;
+    font-size: 16px; /* Example font size */
+    caret-color: red; /* Example color for caret */
+    height: 100%;
+}
+
+/* Adjust caret size */
+#search-query::selection {
+    background: rgba(0, 0, 255, 0.3); /* Example selection background color */
+}
+
+button {
+    padding: 15px; /* Adjust button padding for better height proportion */
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.google-search-bar {
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.search-info {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+#search-engine-info {
+    margin-right: 10px;
+}
+
+#search-engine {
+    padding: 4px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+#custom-search,
+#google-search-box,
+#google-results {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+
+.results {
+    margin-top: 100px; /* Add margin to create space between search bar and results */
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results li {
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.results li:hover {
+    background-color: #eaeaea;
+}
+
+.engine-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+/* Custom styles for Google CSE suggestion box */
+.gsc-completion-container {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 1000;
+}
+
+.gsc-completion-container .gsc-completion {
+    width: 100% !important;
+}
+
+.gsc-results-wrapper-overlay {
+    z-index: 999 !important;
+}
+
+.help-text {
+    /* margin-top: -50px; */
+    font-size: 50px;
+    margin-bottom: 50px;
+    color: #70757a; /* Gray text color */
+}
+
+.columns {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.column {
+    flex: 0 1 calc(25% - 20px); /* Adjust column width */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.column:hover {
+    transform: translateY(-10px);
+}
+
+.column h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #1a0dab; /* Google blue */
+}
+/* 
+@keyframes enlarge {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.1);
+    }
+} */
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: orange;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.header-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.header-button.home {
+    background-color: #0a20e0;
+    color: white;
+}
+
+.header-button.home:hover {
+    background-color: #0a20e0;
+    transform: scale(1.05);
+}
+
+.header-button.google {
+    background-color: #0a20e0;
+    color: white;
+}
+
+.header-button.google:hover {
+    background-color: #0a20e0;
+    transform: scale(1.05);
+}
+
+.header-button.gemini {
+    background-color: #0a20e0;
+    color: white;
+}
+
+.header-button.gemini:hover {
+    background-color: #0a20e0;
+    transform: scale(1.05);
+}
+
+.header-button.wikipedia {
+    background-color: #0a20e0;
+    color: white;
+}
+
+.header-button.wikipedia:hover {
+    background-color: #0a20e0;
+    transform: scale(1.05);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .column {
+        flex: 0 1 calc(33.333% - 20px); /* Adjust column width */
+    }
+}
+
+@media (max-width: 992px) {
+    .column {
+        flex: 0 1 calc(50% - 20px); /* Adjust column width */
+    }
+    h1 {
+        font-size: 36px; /* Adjust font size */
+    }
+    .search-buttons {
+        gap: 20px; /* Adjust gap between buttons */
+    }
+}
+
+@media (max-width: 768px) {
+    .column {
+        flex: 0 1 calc(100% - 20px); /* Adjust column width */
+    }
+    h1 {
+        font-size: 28px; /* Adjust font size */
+    }
+    .search-buttons {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Adjust gap between buttons */
+    }
+    .container {
+        width: 90%; /* Adjust container width */
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 24px; /* Adjust font size */
+    }
+    .search-buttons {
+        gap: 5px; /* Adjust gap between buttons */
+    }
+    .google-search-button, .gemini-search-button, .wiki-search-button {
+        font-size: 14px; /* Adjust button font size */
+        padding: 8px 16px; /* Adjust button padding */
+    }
+    #search-query {
+        width: 100%; /* Make search query input full width */
+    }
+    .container {
+        padding: 10px; /* Adjust container padding */
+    }
+}
+/* Adjustments for smaller screens header */
+@media (max-width: 576px) {
+    header {
+        justify-content: center; /* Center align buttons on smaller screens */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .header-buttons {
+        flex-wrap: wrap; /* Wrap buttons to new line */
+        justify-content: center; /* Center buttons */
+    }
+
+    .header-button {
+        padding: 8px 12px; /* Adjust button padding */
+        font-size: 12px; /* Adjust button font size */
+    }
+}

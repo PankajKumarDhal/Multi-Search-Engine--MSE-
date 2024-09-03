@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Wikipedia.png">
+
+    <title>Wikipedia Search</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/wiki.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body class="wikipedia-background">
+    <header class="navber">
+        <div class="header-buttons">
+            <button class="header-button home" onclick="redirectToPage('index.html')">Home</button>
+            <button class="header-button google" onclick="redirectToPage('google.html')">Google</button>
+            <button class="header-button gemini" onclick="redirectToPage('gemini.html')">Gemini</button>
+            <button class="header-button wikipedia" onclick="redirectToPage('wikipedia.html')">Wikipedia</button>
+        </div>
+    </header>
+    <div class="hbox">
+        <h3 class="header" data-last-letter="A">WIKIPEDI<span style="display: none;">A</span></h3>
+        <p class="hp">The Free Encyclopedia</p>
+
+        <div class="a1">
+            <a href="//en.wikipedia.org/" class="af11">
+                <strong>English</strong>
+                <small class="sm">6,792,000+ <span>articles</span></small>
+            </a>
+    
+            <a href="//es.wikipedia.org/" class="af12">
+                <strong>Español</strong>
+                <small class="sm">1.936.000+ <span>artículos</span></small>
+            </a>
+        </div>
+    
+        <div class="a2">
+            <a href="//ru.wikipedia.org/" class="af21">
+                <strong>Русский</strong>
+                <small class="sm">1&nbsp;967&nbsp;000+ <span>статей</span></small>
+            </a>
+
+            <a href="//ja.wikipedia.org/" class="af22">
+                <strong>日本語</strong>
+                <small class="sm">1,406,000+ <span>記事</span></small>
+            </a>
+        </div>
+
+        <div class="a3">
+            <a href="//de.wikipedia.org/" class="af31">
+                <strong>Deutsch</strong>
+                <small class="sm">2.888.000+ <span>Artikel</span></small>
+            </a>
+
+            <a href="//fr.wikipedia.org/" class="af32">
+                <strong>Français</strong>
+                <small class="sm">2 596 000+ <span>articles</span></small>
+            </a>
+        </div>
+
+        <div class="a4">
+            <a href="//it.wikipedia.org/" class="af41">
+                <strong>Italiano</strong>
+                <small class="sm">1.851.000+ <span>voci</span></small>
+            </a>
+
+            <a href="//zh.wikipedia.org/" class="af42">
+                <strong>中文</strong>
+                <small class="sm">1,407,000+ <span>条目 / 條目</span></small>
+            </a>
+        </div>
+
+        <div class="a5">
+            <a href="//fa.wikipedia.org/" class="af51">
+                <strong><bdi dir="rtl">فارسی</bdi></strong>
+                <small class="sm">۹۹۴٬۰۰۰+ <span>مقاله</span></small>
+            </a>
+
+            <a href="//pt.wikipedia.org/" class="af52">
+                <strong>Português</strong>
+                <small class="sm">1.120.000+ <span>artigos</span></small>
+            </a>
+        </div>
+
+        <img src="./Wikipedia.png" class="midimg">
+
+        
+
+        
+    </div>
+    <div class="container">
+        
+        <div class="search-bar">
+            <input type="text" id="search-query" placeholder="Enter your search query...">
+            <button onclick="performSearch()">Search</button>
+        </div>
+        <div class="results">
+            <ul id="results-list"></ul>
+        </div>
+    </div>
+
+
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+        window.addEventListener('popstate', (event) => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
