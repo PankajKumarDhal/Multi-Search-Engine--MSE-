@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/google.css">
+</head>
+<body class="google-background">
+    <header id="navbar">
+        <div class="header-buttons">
+            <button class="header-button home" onclick="redirectToPage('index.html')">Home</button>
+            <button class="header-button google" onclick="redirectToPage('google.html')">Google</button>
+            <button class="header-button gemini" onclick="redirectToPage('gemini.html')">Gemini</button>
+            <button class="header-button wikipedia" onclick="redirectToPage('wikipedia.html')">Wikipedia</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVEnkgPXAjlKdAROeiiGQdmT0pKYBmKPitVg&s" alt="image" id="image">
+
+        <div class="input-box">
+            <input type="text" id="searchInput" placeholder="Search for anything...">
+            <button id="searchBtn"> Google Search</button>
+            <div>
+                <ul id="language">
+                    <li>Google offered in:</li>
+                    <li><a href="#">हिन्दी</a></li>
+                    <li><a href="#">বাংলা</a></li>
+                    <li><a href="#">తెలుగు</a></li>
+                    <li><a href="#">मराठी</a></li>
+                    <li><a href="#">தமிழ்</a></li>
+                    <li><a href="#">ગુજરાતી</a></li>
+                    <li><a href="#">ಕನ್ನಡ</a></li>
+                    <li><a href="#">മലയാളം</a></li>
+                    <li><a href="#">ਪੰਜਾਬੀ</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="searchResults">
+        
+        </div> 
+    </div>
+
+    <script>
+        function redirectToPage(page) {
+            window.location.href = page;
+        }
+
+        window.addEventListener('popstate', (event) => {
+            window.location.href = 'index.html';
+        });
+    </script>
+    <script src="./js/google.js"></script>
+</body>
+</html>
