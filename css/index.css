@@ -22,6 +22,34 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+/* Define the keyframes for sliding and color animation */
+@keyframes slideColorChange {
+    0% {
+      transform: translateX(-100%);
+      color: #ff6347; /* Tomato color */
+    }
+    50% {
+      transform: translateX(0);
+      color: #4682b4; /* Steel blue color */
+    }
+    
+  }
+  
+  /* Style for the heading with animation */
+  h1 {
+    font-family: 'Arial', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin: 50px 0;
+    animation: slideColorChange 3s ease-in-out infinite;
+    white-space: nowrap;
+  }
+  
+  
+
+
+
 /* Cards Container Styling */
 .search-cards {
     display: flex;

@@ -37,6 +37,7 @@ body, h1, p, ul, li, input, button, a {
     flex-direction: column;
     align-items: center;
     gap: 15px;
+    padding: 1rem;
 }
 
 /* Search Input Field */
@@ -117,24 +118,20 @@ body, h1, p, ul, li, input, button, a {
 }
 
 /* Google Logo Animation */
-#image {
-    width: 270px;
-    margin-bottom: 20px;
-    animation: fadeInScale 1s ease-in-out; /* Animation applied to the image */
-}
-
-/* Animation Keyframes */
-@keyframes fadeInScale {
+.midimg {
+    /* Add a class to target the image */
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
     0% {
-        opacity: 0;
-        transform: scale(0.9);
+      transform: scale(1);
     }
-    60% {
-        opacity: 1;
-        transform: scale(1.05);
+    50% {
+      transform: scale(1.1);
     }
     100% {
-        opacity: 1;
-        transform: scale(1);
+      transform: scale(1);
     }
-}
+  }
+  
