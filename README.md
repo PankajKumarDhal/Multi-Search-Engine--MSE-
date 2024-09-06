@@ -11,12 +11,15 @@ Multi-Search Engine Interface (MSE) is a web application that allows users to ac
 ## Screenshots
 
 ![Multi Search Engine Interface](./images/01.png)
+![Google Search Engine Interface](./images/02.png)
+![Gemini Search Engine Interface](./images/03.png)
+![Wikipedia Search Engine Interface](./images/04.png)
 
 ## Live Demo
 
 Access the live version of the Multi-Search Engine Interface here:
 
-[Multi-Search Engine Interface - Live Demo](YOUR_HOSTING_LINK)
+[Multi-Search Engine Interface - Live Demo](multi-search-engine-mse.vercel.app)
 
 ## Installation
 
