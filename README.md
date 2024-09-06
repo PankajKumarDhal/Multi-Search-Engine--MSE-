@@ -21,10 +21,7 @@ Access the live version of the Multi-Search Engine Interface here:
 
 [Multi-Search Engine Interface - Live Demo](multi-search-engine-mse.vercel.app)
 
-## Installation
-
-To set up the project locally, follow these steps:
-multi-search-engine-interface/
+## multi-search-engine-interface/
 ├── css/
 │   ├── google.css
 │   ├── gemini.css
@@ -43,6 +40,9 @@ multi-search-engine-interface/
 ├── gemini.html
 └── wikipedia.html
 
+## Installation
+
+To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
 
