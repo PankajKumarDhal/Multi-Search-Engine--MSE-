@@ -3,6 +3,12 @@
     margin: 0%;
 }
 
+#loader {
+padding-left: 40%;
+
+}
+
+
 /* Media Query for smaller screens */
 @media (max-width: 768px) {
   .hbox {

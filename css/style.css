@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
 }
+
 .index-background::before {
     content: "";
     position: absolute;
@@ -225,15 +226,6 @@ button {
     margin-bottom: 10px;
     color: #1a0dab; /* Google blue */
 }
-/* 
-@keyframes enlarge {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.1);
-    }
-} */
 
 /* Header styles */
 header {
@@ -246,10 +238,6 @@ header {
     box-sizing: border-box;
 }
 
-.header-buttons {
-    display: flex;
-    gap: 10px;
-}
 
 .header-button {
     padding: 10px 20px;
@@ -259,6 +247,12 @@ header {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+  }
+  
 
 .header-button.home {
     background-color: #0a20e0;
@@ -300,6 +294,38 @@ header {
     transform: scale(1.05);
 }
 
+
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .header-button {
+    animation: slideIn 0.5s ease-out;
+  }
+  
+  .header-button:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  
+  .header-button:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .header-button:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  
+  .header-button:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     .column {

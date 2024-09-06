@@ -12,11 +12,22 @@ searchButton.addEventListener('click', function (e) {
     e.preventDefault();
     let query = searchInputElement.value;
     searchResultElement.innerHTML = '';
+    // Show loader
+  const loader = document.getElementById("loader");
+
+  loader.style.display = "block";
+  // Show loader
+
     let getdata = async function () {
         // Fetch data from the API using async/await syntax
         try {
             let response = await fetch(`https://api.serpstack.com/search?access_key=${apiKey}&type=web&query=${encodeURIComponent(query)}`);
             let data = await response.json();
+            
+//   loader
+           loader.style.display = "none";
+        //    loader
+          
             console.log(data);
             data.organic_results.forEach(element => {
                 console.log(element);

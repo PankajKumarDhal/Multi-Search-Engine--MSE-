@@ -7,15 +7,6 @@ body, h1, p, ul, li, input, button, a {
     text-decoration: none;
 }
 
-/* Body Styling */
-/* body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-color: #fff;
-} */
 
 /* Main Container */
 .container {

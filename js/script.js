@@ -118,31 +118,81 @@ function processGeminiData(data) {
     return content || "No content found";  // Return the content or a default message
 }
 
+// // Function to search using the Wikipedia API
+// function searchWikipedia(query) {
+//     const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${query}&format=json&origin=*`;
+
+//     // Fetch search results from Wikipedia API
+//     fetch(url)
+//         .then(response => response.json())
+//         .then(data => {
+
+//             // Map search results to a simpler format
+//             const results = data.query.search.map(item => ({
+//                 title: item.title,
+//                 snippet: item.snippet,
+//                 link: `https://en.wikipedia.org/wiki/${item.title}`
+//             }));
+//             displayWikiResults(results); // Display the results
+//         })
+//         .catch(error => console.error('Error:', error)); // Log any errors
+// }
+
+// // Function to display Wikipedia search results
+// function displayWikiResults(results) {
+//     const resultsList = document.getElementById('results-list');
+//     resultsList.innerHTML = '';
+//         // Show loader
+//   const loader = document.getElementById("loader");
+//   loader.style.display = "block";
+//   // Show loader
+    
+//     results.forEach(result => {
+//         //   loader
+//     loader.style.display = "none";
+//     //    loader
+        
+//         const li = document.createElement('li');
+        
+//         li.innerHTML = `<h3><a href="${result.link}" target="_blank">${result.title}</a></h3><p>${result.snippet}</p>`;
+//         resultsList.appendChild(li); // Add each result to the list
+//     });
+// }
+
+
 // Function to search using the Wikipedia API
 function searchWikipedia(query) {
     const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${query}&format=json&origin=*`;
+
+    // Show loader before fetching data
+    const loader = document.getElementById("loader");
+    loader.style.display = "block";
 
     // Fetch search results from Wikipedia API
     fetch(url)
         .then(response => response.json())
         .then(data => {
-
             // Map search results to a simpler format
             const results = data.query.search.map(item => ({
                 title: item.title,
                 snippet: item.snippet,
                 link: `https://en.wikipedia.org/wiki/${item.title}`
             }));
+
             displayWikiResults(results); // Display the results
         })
-        .catch(error => console.error('Error:', error)); // Log any errors
+        .catch(error => console.error('Error:', error))
+        .finally(() => {
+            // Hide loader after fetching data is complete
+            loader.style.display = "none";
+        });
 }
 
 // Function to display Wikipedia search results
 function displayWikiResults(results) {
     const resultsList = document.getElementById('results-list');
     resultsList.innerHTML = '';
-    
+
     results.forEach(result => {
         const li = document.createElement('li');
         li.innerHTML = `<h3><a href="${result.link}" target="_blank">${result.title}</a></h3><p>${result.snippet}</p>`;

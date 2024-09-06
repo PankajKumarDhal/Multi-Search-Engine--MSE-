@@ -8,6 +8,7 @@
     <title>Wikipedia Search</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/wiki.css">
+    
     <script src="./js/script.js" defer></script>
 </head>
 <body class="wikipedia-background">
@@ -96,6 +97,9 @@
             <input type="text" id="search-query" placeholder="Enter your search query...">
             <button onclick="performSearch()">Search</button>
         </div>
+        
+        <img id="loader" style="display: none" src="/loader.gif" alt="Loader" />
+
         <div class="results">
             <ul id="results-list"></ul>
         </div>
