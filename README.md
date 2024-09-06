@@ -24,9 +24,28 @@ Access the live version of the Multi-Search Engine Interface here:
 ## Installation
 
 To set up the project locally, follow these steps:
+multi-search-engine-interface/
+├── css/
+│   ├── google.css
+│   ├── gemini.css
+│   ├── index.css
+│   ├── style.css
+│   └── wiki.css
+├── images/
+│   ├── loader.gif
+│   └── Wikipedia.png
+├── js/
+│   ├── google.js
+│   ├── script.js
+│   └── wiki.js
+├── index.html
+├── google.html
+├── gemini.html
+└── wikipedia.html
+
 
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/multi-search-engine-interface.git
+   git clone https://github.com/PankajKumarDhal/Multi-Search-Engine--MSE-.git
    cd multi-search-engine-interface
