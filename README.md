@@ -19,7 +19,7 @@ Multi-Search Engine Interface (MSE) is a web application that allows users to ac
 
 Access the live version of the Multi-Search Engine Interface here:
 
-[Multi-Search Engine Interface - Live Demo](multi-search-engine-mse.vercel.app)
+[Multi-Search Engine Interface - Live Demo](https://multi-search-engine-mse.vercel.app/)
 
 ## multi-search-engine-interface/
 ├── css/
